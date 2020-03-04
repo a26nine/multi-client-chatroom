@@ -1,6 +1,6 @@
 # Multi-client Chatroom
 
-A simple python based multi-client chatroom application built over the fundamentals of sockets in python.
+A simple python3 based multi-client chatroom application built over the fundamentals of sockets in python.
 
 *Developed as a part of the assessment for the module CST4045 Cross Platform Application Development at Middlesex University, London during the academic year 2019-20 under the guidance of module leader Dr Ralph Moseley.*
 
@@ -25,8 +25,8 @@ A simple python based multi-client chatroom application built over the fundament
 2. Run server script
 > python3 chat_server.py
 3. Start server
-    - Enter port number.
-    - Enter admin password.
+    - Enter port number
+    - Enter admin password
 4. Run client script
 > python3 chat_client.py [server_ip] [server_port]
 
@@ -50,3 +50,8 @@ There are certain known issues with respect to this code:
 1. After running the server script, port number for the server has to be entered; some terminals print the line asking for the port number, others just keep waiting for the input without priting the line.
 2. Getpass module issues a warning 'Warning: Password input may be echoed' on insecure terminals.
 3. Incorrect login creates a new temporary user on the server.
+4. The application is not yet fully compatible over the internet:
+    - Same encryption key is used by the server and the client which is generated and stored on the server.
+    - Some user validation takes place on the client side and needs to access the user database locally on the client side.
+    
+:heavy_exclamation_mark: **The code needs refactoring. Please note that this is my first python project and was written in a matter of just few hours.**
